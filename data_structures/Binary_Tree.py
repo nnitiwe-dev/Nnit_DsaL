@@ -37,9 +37,10 @@ class BST:
         output=[]
         def _traversal(type_,data_node):
             if type_="inorder":
-                _traversal(type_,data_node.left)
-                output.append(data_node.data)
-                _traversal(type_,data_node.right)
+                if data_node !=None:
+                    _traversal(type_,data_node.left)
+                    output.append(data_node.data)
+                    _traversal(type_,data_node.right)
 
         _traversal(type_,self.root)
         
